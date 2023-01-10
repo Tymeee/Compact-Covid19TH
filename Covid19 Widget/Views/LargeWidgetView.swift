@@ -8,7 +8,7 @@
 import SwiftUI
 import WidgetKit
 
-struct MediumWidgetView: View{
+struct LargeWidgetView: View{
     let data: Model
     
     
@@ -27,17 +27,16 @@ struct MediumWidgetView: View{
                         Rectangle()
                             .foregroundColor(Color(red: 229/255, green: 56/255, blue: 59/255))
                             .overlay{
-                                VStack(spacing: -4){
-                                    Image("virus")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(height: 20)
-
+                                VStack(){
+                                    Text("ติดเชื้อ")
                                     
-                                    Text("\(data.covidData.NewConfirmed)")
+                                    Text("\(data.covidData.Confirmed)")
                                         .fontWeight(.bold)
-                                        .font(.system(size: 18))
-                                }
+                                    
+                                    Text("(+ \(data.covidData.NewConfirmed))")
+                                        .font(.footnote)
+                                        
+                                }.font(.system(size: 18))
                             }
                         
                         //Recovered
@@ -45,38 +44,51 @@ struct MediumWidgetView: View{
                             .foregroundColor(Color(red: 0/255, green: 127/255, blue: 95/255))
                             .overlay{
                                 VStack{
-                                    Image(systemName: "cross.fill");                               Text("\(data.covidData.NewRecovered)")
+                                    Text("รักษาอยู่")
+                                        
+                                    Text("\(data.covidData.Hospitalized)")
                                         .fontWeight(.bold)
-                                        .font(.system(size: 18))
-                                }
+                                    
+                                    Text("(+ \(data.covidData.NewHospitalized))")
+                                        .font(.footnote)
+                                        
+                                }.font(.system(size: 18))
                             }
                     }
-                    //Hospitalized
+                    
+   
                     HStack(spacing: 0){
+                       
+                        //Hospitalized
                         Rectangle()
                             .foregroundColor(Color(red: 256/255, green: 172/255, blue: 60/255))
                             .overlay{
-                                VStack{
-                                    Image(systemName: "cross.case.fill");                                    Text("\(data.covidData.NewHospitalized)")
+                                VStack(){
+                                    Text("หายแล้ว")
+                                        
+                                    Text("\(data.covidData.Recovered)")
                                         .fontWeight(.bold)
-                                        .font(.system(size: 18))
-                                }
+                                    
+                                    Text("(+ \(data.covidData.NewRecovered))")
+                                        .font(.footnote)
+                                    
+                                }.font(.system(size: 18))
                             }
                         
                         //Death
                         Rectangle()
                             .foregroundColor(Color(red: 52/255, green: 58/255, blue: 64/255))
                             .overlay{
-                                VStack(spacing: -2){
-                                    Image("deathicon")
-                                        .resizable()
-                                        .frame(width: 13, height: 18)
-                                        .aspectRatio(contentMode: .fit)
-                                    
-                                    Text("\(data.covidData.NewDeaths)")
+                                VStack(){
+                                    Text("เสียชีวิต")
+                                        
+                                    Text("\(data.covidData.Deaths)")
                                         .fontWeight(.bold)
-                                        .font(.system(size: 18))
-                                }
+                                    
+                                    Text("(+ \(data.covidData.NewDeaths))")
+                                        .font(.footnote)
+                                    
+                                }.font(.system(size: 18))
                             }
                     }
                 }.foregroundColor(Color.white)
@@ -95,7 +107,7 @@ struct Covid19_Widget5_Previews: PreviewProvider {
         Group{
             Covid19_Widget5EntryView(data: Model(date: Date(),covidData: CovidData(Confirmed: 0, Recovered: 0, Hospitalized: 0, Deaths: 0, NewConfirmed: 0, NewRecovered: 0, active: 0, NewDeaths: 0, NewHospitalized: 0, UpdateDate: "")))
                 .previewDevice("iPhone 12 Pro")
-                .previewContext(WidgetPreviewContext(family: .systemMedium))
+                .previewContext(WidgetPreviewContext(family: .systemLarge))
 .previewInterfaceOrientation(.portrait)
             
             

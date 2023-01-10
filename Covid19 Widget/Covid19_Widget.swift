@@ -109,7 +109,7 @@ struct Covid19_Widget5EntryView : View{
     let data: Model
     
     var body: some View{
-        MediumWidgetView(data: data)
+        LargeWidgetView(data: data)
     }
 }
 
@@ -176,7 +176,7 @@ struct Covid19_Widget5: Widget {
         }
         .configurationDisplayName("Covid-19 Widget")
         .description("All daily cases")
-        .supportedFamilies([.systemMedium])
+        .supportedFamilies([.systemLarge])
     }
 }
 

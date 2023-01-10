@@ -21,8 +21,8 @@ struct ConfirmedWidgetView: View{
                 Rectangle()
                     .foregroundColor(Color(red: 229/255, green: 56/255, blue: 59/255))
                     .overlay{
-                        VStack(spacing: -1){
-                            Text("ติดเชื้อ")
+                        VStack(){
+                            Text("ติดเชื้อวันนี้")
                             
                             Text("\(data.covidData.NewConfirmed)")
                                 .fontWeight(.bold)

@@ -15,7 +15,7 @@ struct PhoneBox: View {
                 Link(destination: URL(string: "tel:\(item.0)")!, label: {
                     HStack{
                         Text("\(item.0)")
-                            .font(.system(size: 23))
+                            .font(.system(size: 20))
                             .fontWeight(.semibold)
                             .foregroundColor(Color.red)
                         

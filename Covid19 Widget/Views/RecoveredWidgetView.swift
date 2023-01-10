@@ -21,8 +21,8 @@ struct RecoveredWidgetView: View{
                 Rectangle()
                     .foregroundColor(Color(red: 0/255, green: 127/255, blue: 95/255))
                     .overlay{
-                        VStack(spacing: -1){
-                            Text("หายป่วย")
+                        VStack(){
+                            Text("หายป่วยวันนี้")
                             Text("\(data.covidData.NewRecovered)")
                                 .fontWeight(.bold)
                                 .font(.system(size: 25))

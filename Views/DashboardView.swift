@@ -35,6 +35,7 @@ struct DashboardView: View {
                 ){
                     ProvinceDeath()
                 }.headerProminence(.increased)
+                 */
                 
                 Section(header:
                             Text("รวมเบอร์สายด่วน")
@@ -42,7 +43,7 @@ struct DashboardView: View {
                     PhoneBox()
                     
                 }.headerProminence(.increased)
-                 */
+                 
                  
             }
             .onAppear {

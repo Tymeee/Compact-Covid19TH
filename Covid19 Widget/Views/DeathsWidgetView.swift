@@ -21,9 +21,9 @@ struct DeathsWidgetView: View{
                 Rectangle()
                     .foregroundColor(Color(red: 52/255, green: 58/255, blue: 64/255))
                     .overlay{
-                        VStack(spacing: -1){
+                        VStack(){
                             
-                            Text("เสียชีวิต")
+                            Text("เสียชีวิตวันนี้")
                             
                             Text("\(data.covidData.NewDeaths)")
                                 .fontWeight(.bold)
