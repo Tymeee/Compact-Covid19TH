@@ -18,6 +18,5 @@ struct Covid19WidgetBundle: WidgetBundle {
         Covid19_Widget3()
         Covid19_Widget4()
         Covid19_Widget5()
-        // add more Widgets if you want
     }
 }
