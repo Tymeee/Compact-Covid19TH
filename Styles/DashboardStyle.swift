@@ -10,14 +10,14 @@ import SwiftUI
 
 extension Text {
     
-    func DailyStatsStyle() -> some View {
+    func TotalStatStyle() -> some View {
         self
-            .font(.system(size: 30))
+            .font(.system(size: 28))
             .fontWeight(.semibold)
             .animation(Animation.default)
     }
     
-    func TotalStatsStyle() -> some View {
+    func DailyStatStyle() -> some View {
         self
             .font(.footnote)
             .fontWeight(.semibold)

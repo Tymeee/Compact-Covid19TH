@@ -40,36 +40,34 @@ struct StatsView: View {
                     .overlay(
                         VStack(spacing: 5){
                             HStack(spacing: -5){
-                                Text("Cases ")
+                                Text("ติดเชื้อสะสม")
                                 
                             }.frame(height: 30)
                             
                             Text("\(covidData2?.Confirmed ?? 0)")
-                                .DailyStatsStyle()
+                                .TotalStatStyle()
                             
                             Text("(+ \(covidData2?.NewConfirmed ?? 0))")
-                                .TotalStatsStyle()
+                                .DailyStatStyle()
 
-            
                         }
                         
                     )
                 
-                //New recovered
-                //New hospitalized
+
                 HStack(spacing: 10){
-                    // New recovered
+                    //Recovered
                     RoundedRectangle(cornerRadius: 25)
                         .foregroundColor(Color(red: 0/255, green: 127/255, blue: 95/255))
                         .overlay(
                             VStack(spacing: 5){
-                                Text("Recovered")
+                                Text("หายแล้ว")
                                 
                                 Text("\(covidData2?.Recovered ?? 0)")
-                                    .DailyStatsStyle()
+                                    .TotalStatStyle()
                                 
                                 Text("(+ \(covidData2?.NewRecovered ?? 0))")
-                                    .TotalStatsStyle()
+                                    .DailyStatStyle()
                             })
                     
                     // Hospitalized
@@ -77,13 +75,13 @@ struct StatsView: View {
                         .foregroundColor(Color(red: 256/255, green: 172/255, blue: 60/255))
                         .overlay(
                             VStack(spacing: 5){
-                                Text("Hospitalized ")
+                                Text("รักษาอยู่")
                                 
                                 Text("\(covidData2?.Hospitalized ?? 0)")
-                                    .DailyStatsStyle()
+                                    .TotalStatStyle()
                                 
                                 Text("(+ \(covidData2?.NewHospitalized ?? 0))")
-                                    .TotalStatsStyle()
+                                    .DailyStatStyle()
                             }
                         )
                 }.frame(height: 210)
@@ -96,13 +94,13 @@ struct StatsView: View {
                         .foregroundColor(Color(red: 52/255, green: 58/255, blue: 64/255))
                         .overlay(
                             VStack(spacing: 5){
-                                Text("Death")
+                                Text("เสียชีวิต")
                                     
                                 Text("\(covidData2?.Deaths ?? 0)")
-                                    .DailyStatsStyle()
+                                    .TotalStatStyle()
                                 
                                 Text("(+ \(covidData2?.NewDeaths ?? 0))")
-                                    .TotalStatsStyle()
+                                    .DailyStatStyle()
                             })
                 }.frame(height: 150)
                 

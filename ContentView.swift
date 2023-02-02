@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         
         
-        LaunchScreen(imageSize: CGSize(width: 128, height: 128)) {
+        /*LaunchScreen(imageSize: CGSize(width: 128, height: 128)) {
             
                 DashboardView()
             
@@ -22,7 +22,9 @@ struct ContentView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
 
-        }
+        }*/
+        
+        DashboardView()
         
     }
     

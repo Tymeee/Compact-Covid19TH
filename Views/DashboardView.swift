@@ -22,20 +22,20 @@ struct DashboardView: View {
                 StatsView()
                     .listRowBackground(Color.clear)
                 
-                /*
+                
                 Section(header:
-                            Text("ยอดติดเชื้อรายจังหวัด 🇹🇭")
+                            Text("ยอดติดเชื้อต่ออาทิตย์")
                 ){
                     
                     ProvinceCase()
                 }.headerProminence(.increased)
                 
                 Section(header:
-                            Text("ยอดเสียชีวิตรายจังหวัด 🇹🇭")
+                            Text("ยอดเสียชีวิตต่ออาทิตย์")
                 ){
                     ProvinceDeath()
                 }.headerProminence(.increased)
-                 */
+                 
                 
                 Section(header:
                             Text("รวมเบอร์สายด่วน")

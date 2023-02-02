@@ -19,10 +19,11 @@ struct ProvinceCase: View {
                     HStack{
                         Text((course.province))
                             .scaleEffect(1.05)
+                            .padding(.leading, 8)
+
                         Spacer()
                         
                         Text("\(course.new_case)")
-                            .fontWeight(.semibold)
                             .padding(.trailing, 20)
                             .scaleEffect(1.2)
                     }
@@ -47,14 +48,16 @@ struct ProvinceDeath: View {
         
         VStack{
             ScrollView{
+                
                 ForEach((viewModel2.courses), id: \.self) { course in
                     HStack{
                         Text((course.province))
                             .scaleEffect(1.05)
+                            .padding(.leading, 8)
+                        
                         Spacer()
                         
                         Text("\(course.new_death)")
-                            .fontWeight(.semibold)
                             .padding(.trailing, 20)
                             .scaleEffect(1.2)
                     }
